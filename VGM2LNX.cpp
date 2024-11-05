@@ -20,7 +20,7 @@ int main( int argc, char const* argv[] )
     std::filesystem::path path{ argv[1] };
     std::filesystem::path outpath{ argv[ argc < 3 ? 1 : 2] };
     if ( argc < 3 ){
-#ifdef STANDLAON
+#ifdef STANDALONE
       outpath.replace_extension( ".lnx" );
 #else
       outpath.replace_extension( ".v2l" );
